@@ -58,6 +58,8 @@ export const ICONS: Record<string, string> = {
   'chevron-up': `<path d="M5 15l7-7 7 7"/>`,
   check: `<path d="M4.5 12.8 9 17.3 19.5 6.8"/>`,
   circle: `<circle cx="12" cy="12" r="8.5"/>`,
+  download: `<path d="M12 3.5v11.5"/><path d="M7.3 10.3 12 15l4.7-4.7"/><path d="M4.5 18.5h15"/>`,
+  smartphone: `<rect x="7" y="2.5" width="10" height="19" rx="2.2"/><path d="M11 18.3h2"/>`,
 };
 
 export type IconName = keyof typeof ICONS;

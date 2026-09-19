@@ -3,12 +3,13 @@ import { RouterLink } from '@angular/router';
 import { HeartsService, ResetService } from '../../../core/services';
 import { IconComponent } from '../icon/icon.component';
 import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
+import { InstallButtonComponent } from '../install-button/install-button.component';
 
-/** Barra superior de cada página: nombre de la app, título de la sección y corazones. */
+/** Barra superior de cada página: nombre de la app, título de la sección, descargar y corazones. */
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [RouterLink, IconComponent, ConfirmDialogComponent],
+  imports: [RouterLink, IconComponent, ConfirmDialogComponent, InstallButtonComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <header class="sticky top-0 z-30 flex items-center justify-between border-b border-lilac-100 bg-lilac-50/80 px-4 py-3.5 backdrop-blur-lg sm:px-6 lg:px-8">
@@ -22,6 +23,8 @@ import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.compone
       <h1 class="hidden text-lg font-semibold text-lilac-950 lg:block">{{ title() }}</h1>
 
       <div class="flex items-center gap-2">
+        <app-install-button />
+
         <button
           type="button"
           (click)="confirmOpen.set(true)"

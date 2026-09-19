@@ -9,3 +9,4 @@ export * from './memory.service';
 export * from './stats.service';
 export * from './celebration.service';
 export * from './reset.service';
+export * from './pwa-install.service';
